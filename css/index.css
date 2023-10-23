@@ -1,0 +1,1352 @@
+/*fonts*/
+@font-face {
+    font-family: Helvetica;
+    src: url(../fonts/Helvetica.ttc);
+}
+@font-face {
+    font-family: Helvetica-bold;
+    src: url(../fonts/Helvetica-Bold-Font.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background: #000;
+}
+
+
+/* Nav*/
+
+nav {
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    top: 0px;
+    background: none;
+    /*box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.388);*/
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    z-index: 500;
+}
+nav .navlogo {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .navlogo img {
+    height: 80%;
+}
+
+nav .navsections {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+    z-index: 510;
+}
+nav .navsections .btnnavv {
+    border: none;
+    background: none;
+    font-family: Helvetica;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav .navsections .btnnavv:hover {
+    color: #80bc00;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+nav .navsections .aaa {
+    padding: 10px;
+    background: #80bc00;
+    color: #fff;
+    border-radius: 25px;
+}
+nav .navsections .aaa .btnclientes {
+    color: #fff;
+    background: none;
+    text-decoration: none;
+    border: none;
+    font-size: 18px;
+}
+nav .navsections .aaa:hover .btnclientes {
+    color: #aeff01;
+}
+nav .navsections .linebox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: -20px;
+    z-index: 502;
+}
+nav .navsections .linebox > div {
+    width: 80px;
+    height: 10px;
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+    background: #80bc00;
+    border-radius: 5px 5px 0px 0px;
+    transition: 300ms ease;
+}
+nav .navsectionsresponsive {
+    width: max-content;
+    height: 100%;
+    display: none;
+    justify-content: right;
+    align-items: center;
+    z-index: 510;
+}
+nav .navsectionsresponsive img {
+    height: 100%;
+    width: 40px;
+}
+.realshadow {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 790;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.navemr {
+    display: none;
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    z-index: 800;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.8);
+    transition: 0.5s ease;
+    transform: translatex(50vw);
+}
+.navemr .navemrcont {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+}
+.navemr .navemrcont .btnnavv {
+    border: none;
+    background: none;
+    font-family: Helvetica;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #9ea1a273;
+}
+.navemr .navemrcont .btnnavv:hover {
+    color: #80bc00;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.navemr .navemrcont .aa {
+    padding: 10px;
+    background: #80bc00;
+    color: #fff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+.navemr .navemrcont .aa .btnclientes {
+    color: #fff;
+    background: none;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    font-size: 18px;
+    text-decoration: none;
+}
+.navemr .navemrcont .aa:hover .btnclientes {
+    color: #aeff01;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Contenerdor maestro de la pagina*/
+.mastercont {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll ;
+    display: flex;
+    flex-wrap: wrap;
+    
+    scroll-snap-type: y mandatory;
+}
+
+/*Hero*/
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/Backgrounds/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    display: flex;
+    overflow: hidden;
+    scroll-snap-align: start;
+}
+.hero .herotext {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .herotext .herotxtcont {
+    width: 80%;
+}
+.hero .herotext .herotxtcont img {
+    max-width: 40vw;
+    max-height: 90vh;
+    position:relative;
+    display: none;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.hero .heroimg {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.hero .heroimg .heroimgcont {
+    width: 80%;
+    display: flex;
+}
+.hero .heroimg .heroimgcont img {
+    max-width: 50vw;
+    max-height: 80vh;
+    bottom: -10px;
+    right: -10px;
+    position:relative;
+    display: none;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+
+/*Hero 2!!!!!*/
+
+.hero2 {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/Backgrounds/hero2back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+    flex-direction: column;
+    scroll-snap-align: start;
+}
+.hero2 .hero2text {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: left;
+}
+.hero2 .hero2text .hero2textbox {
+    margin-bottom: -10px;
+}
+.hero2 .hero2text .hero2textbox p {
+    font-size: 100px;
+    font-family: Helvetica-bold;
+    color: #fff;
+}
+
+
+.hero2 .hero2greenbox {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: right;
+}
+.hero2 .hero2greenbox .hero2greenboxint {
+    width: 80%;
+    height: 100%;
+    background: #80bc00;
+    border-radius: 100px 0 0 100px;
+    box-shadow:-15px 15px 0px #4767019f;
+    display: flex;
+    gap: 30px;
+}
+
+
+.hero2 .hero2greenbox .hero2greenboxint .hero2img {
+    width: 50%;
+    height: 100%;
+}
+.hero2 .hero2greenbox .hero2greenboxint .hero2img .hero2imgcont {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero2 .hero2greenbox .hero2greenboxint .hero2img .hero2imgcont img {
+    max-width: 100%;
+    max-height: 100%;
+    transform: translateY(20px);
+    transition: 2s ease-in-out;
+}
+
+.hero2 .hero2greenbox .hero2greenboxint .hero2greentxt {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+}
+.hero2 .hero2greenbox .hero2greenboxint .hero2greentxt .hero2greentxtint {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero2 .hero2greenbox .hero2greenboxint .hero2greentxt .hero2greentxtint img {
+    width: 100%;
+    max-height: 100%;
+    max-width: 80%;
+    position: relative;
+    transition: 0.5s ease;
+    display: none;
+    opacity: 0;
+}
+
+
+
+.hero3 {
+    width: 100%;
+    height: 100vh;
+    background: rgb(67,193,0);
+    background: linear-gradient(90deg, #43c100 0%, #80bc00 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+.hero3 .hero3cont {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+.hero3 .hero3cont .hero3txt {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+}
+.hero3 .hero3cont .hero3txt p {
+    font-family: Helvetica-bold;
+    font-size: 60px;
+    color: #fff;
+}
+.hero3 .hero3cont .hero3reel {
+    width: 80%;
+    height: 80%;
+    overflow-x: scroll;
+}
+.hero3 .hero3cont .hero3reel .hero3reelcont {
+    width: fit-content;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    gap: 25px;
+}
+.hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg {
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    border-radius:30px 0px 30px 0px;
+    box-shadow:9px 9px 0px #9ea1a2 ;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 0px 20px 0px;
+}
+.hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .contimghero3 {
+    width: 100%;
+    height: 50%;
+}
+.hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .contimghero3 img {
+    width: 100%;
+}
+.hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .conttexthero3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
+    padding: 10px 15px;
+}
+.hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .conttexthero3 .hero3title {
+    display: flex;
+    font-family: Helvetica-bold;
+    font-size: 20px;
+}
+.hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .conttexthero3 .hero3title .green {
+    color: #80bc00;
+}
+.hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .conttexthero3 p {
+    text-align: center;
+    font-family: helvetica;
+    font-size: 13px;
+}
+.hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .conttexthero3 b {
+    font-family: Helvetica-bold;
+}
+
+
+
+
+.hero4 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    scroll-snap-align: start;
+}
+.hero4 .hero4cont {
+    width: 100%;
+    height: 70%;
+    margin-top: 100px;
+    display: flex;
+    gap: 30px;
+}
+.hero4 .hero4cont .hero4img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+}
+.hero4 .hero4cont .hero4img img {
+    width: 120%;
+}
+.hero4 .hero4cont .hero4txt {
+    width: 50%;
+    height: 100%;
+}
+.hero4 .hero4cont .hero4txt .hero4txtconocenos {
+    width: 100%;
+    height: 40%;
+}
+.hero4 .hero4cont .hero4txt .hero4txtconocenos h3 {
+    font-size: 40px;
+    font-family: helvetica-bold;
+}
+.hero4 .hero4cont .hero4txt .hero4txtconocenos p {
+    font-size: 15px;
+    font-family: helvetica;
+}
+.hero4 .hero4cont .hero4txt .hero4txtconocenos b {
+    color: #43c100;
+    font-family: helvetica-bold;
+}
+.hero4 .hero4cont .hero4txt .hero4txtfilosofia {
+    width: 100%;
+    height: 40%;
+}
+.hero4 .hero4cont .hero4txt .hero4txtfilosofia h3 {
+    font-size: 40px;
+    font-family: helvetica-bold;
+}
+.hero4 .hero4cont .hero4txt .hero4txtfilosofia p {
+    font-size: 15px;
+    font-family: helvetica;
+}
+.hero4 .hero4cont .hero4txt .hero4txtfilosofia b {
+    color: #43c100;
+    font-family: helvetica-bold;
+}
+.hero4 .hero4cont .hero4txt .hero4txtimg {
+    width: 90%;
+    height: 10%;
+    overflow-x: hidden;
+}
+.hero4 .hero4cont .hero4txt .hero4txtimg .hero4txtimgcont {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+.hero4 .hero4cont .hero4txt .hero4txtimg .hero4txtimgcont img {
+    height: 90%;
+    
+}
+
+
+
+.hero5 {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/hero5/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    align-items: center;
+    scroll-snap-align: start;
+}
+.hero5 .hero5cont {
+    height: 70%;
+    width: 100%;
+    margin-top: 100px;
+    padding: 0px 100px;
+}
+.hero5 .hero5cont .hero5txt {
+    width: 100%;
+    height: 30%;
+}
+.hero5 .hero5cont .hero5txt h3 {
+    font-size: 70px;
+    font-family: helvetica-bold;
+    color: #fff;
+}
+.hero5 .hero5cont .hero5txt b {
+    color: #43c100;
+}
+.hero5 .hero5cont .hero5video {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+.hero5 .hero5cont .hero5video iframe {
+    height: 100%;
+    width: 80%;
+    box-shadow: 10px 10px 0px #44c10076;
+    border-radius: 20px;
+}
+
+
+
+.hero6 {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #80bc00;
+    scroll-snap-align: start;
+}
+.hero6 .hero6cont {
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    display: flex;
+}
+.hero6 .hero6cont .hero6imgcont {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+}
+.hero6 .hero6cont .hero6imgcont img {
+    height: 100%;
+    max-height: 100%;
+    width: max-content;
+}
+.hero6 .hero6cont .preguntascont {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+}
+.hero6 .hero6cont .preguntascont .preguntasbox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero6 .hero6cont .preguntascont .preguntasbox > p {
+    font-family: helvetica-bold;
+    font-size: 40px;
+    color: #fff;
+}
+.hero6 .hero6cont .preguntascont .preguntasbox .minbox6 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: 500ms ease;
+}
+.hero6 .hero6cont .preguntascont .preguntasbox .minbox6 .preguntaspx {
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 20px;
+    transition: 500ms ease;
+}
+.hero6 .hero6cont .preguntascont .preguntasbox .minbox6 .preguntaspx:hover {
+    background: #d5ffbe;
+    cursor: pointer;
+}
+.hero6 .hero6cont .preguntascont .preguntasbox .minbox6 .preguntaspx h4 {
+    font-size: 30px;
+    font-family: helvetica-bold;
+}
+.hero6 .hero6cont .preguntascont .preguntasbox .minbox6 .preguntaspx h4 b {
+    color: #43c100;
+}
+.hero6 .hero6cont .preguntascont .preguntasbox .minbox6 .preguntaspx p {
+    font-size: 15px;
+    font-family: helvetica;
+    display: none;
+    transition: 500ms ease;
+    margin-top: -50px;
+    opacity: 0;
+}
+
+
+
+
+.hero7 {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    scroll-snap-align: start;
+}
+.hero7 .hero7cont {
+    width: 100%;
+    height: 100%;
+    padding-top: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hero7 .hero7cont h4 {
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    font-family: helvetica-bold;
+}
+.hero7 .hero7cont .reeltestimonios {
+    width: 80%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+}
+.hero7 .hero7cont .reeltestimonios .arrowtestimonios {
+    width: 50px;
+    height: 50px;
+}
+.arrowlefttst {
+    transform: rotate(180deg);
+}
+.hero7 .hero7cont .reeltestimonios .arrowtestimonios img {
+    width: 100%;
+}
+.hero7 .hero7cont .reeltestimonios .reeltesticont {
+    width: 90%;
+    height: 100%;
+    padding: 10px 0px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.hero7 .hero7cont .reeltestimonios .reeltesticont .reeltestibox {
+    width:200%;
+    height: 100%;
+    display: flex;
+}
+.hero7 .hero7cont .reeltestimonios .reeltesticont .reeltestibox .tst1img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero7 .hero7cont .reeltestimonios .reeltesticont .reeltestibox .tst1img img {
+    width: 80%;
+    display: flex;
+}
+.hero7 .hero7cont .reelclientestst {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+.hero7 .hero7cont .reelclientestst .reelclienteststcont {
+    width: 70%;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.hero7 .hero7cont .reelclientestst .reelclienteststcont .reelclienteststbox {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+
+
+.hero8{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/hero8/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align:end;
+}
+.hero8 .hero8cont {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    gap: 30px;
+}
+.hero8 .hero8cont h5 {
+    font-size: 70px;
+    text-align: center;
+    font-family: helvetica-bold;
+    color: #fff;
+}
+.hero8 .hero8cont button {
+    background: #fff;
+    font-size: 30px;
+    padding: 20px;
+    border:7px solid #5f8a03;
+    border-radius: 20px;
+    color: #31790a;
+    font-family: helvetica-bold;
+}
+.hero8 .hero8cont button:hover {
+    background: #ebebeb;
+    cursor: pointer;
+}
+footer {
+    display: flex;
+    position: relative;
+    bottom: 0px;
+    width: 100vw;
+    height: 130px;
+    background:#9ea1a2 ;
+    padding: 10px 20px;
+    scroll-snap-align:end;
+}
+footer .footercont {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .footercont .logocontfo {
+    height: 100%;
+    width: max-content;
+}
+footer .footercont .logocontfo img {
+    height: 100%;
+}
+footer .footercont .redescont {
+    height: 100%;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+}
+footer .footercont .redescont p {
+    height: 40%;
+    font-size: 25px;
+    font-family: helvetica-bold;
+    color: #fff;
+}
+footer .footercont .redescont .iconredescont {
+    display: flex;
+    height: 30%;
+    gap: 20px;
+    margin-top: 10px;
+}
+footer .footercont .redescont .iconredescont a {
+    height: 100%;
+}
+footer .footercont .redescont .iconredescont a img {
+    height: 100%;
+}
+
+.shadownav {
+    width: 100vw;
+    height: calc(100vh + 20px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #80bc00;
+    z-index: 400;
+    opacity: 1;
+    display: none;
+    transition: 500ms ease-in;
+    transform: translateY(103vh);
+    justify-content: center;
+    align-items: flex-start;
+}
+.shadownav img {
+    margin-top: 150px;
+    width: 40%;
+    height: auto;
+    transition: 500ms ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*seccion de servicios*/
+.masterservicios {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+}
+
+.servicios {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: url(../img/servicios/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    justify-content: center;
+    align-items: center;
+}
+.servicios .servicioscont {
+    width: 90%;
+    height: 65%;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.servicios .servicioscont .arrow {
+    width: 50px;
+    height: 50px;
+}
+.servicios .servicioscont .arrow2 {
+    transform: rotate(180deg);
+}
+.servicios .servicioscont .arrow img {
+    width: 100%;
+    height: 100%;
+}
+.servicios .servicioscont .serviciosreel {
+    height: 80%;
+    width: calc(100% - 120px);
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    transition: 1s ease;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont {
+    height: 100%;
+    width: max-content;
+    display: flex;
+    gap: 30px;
+    transition: 1s ease;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard {
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    border: 5px solid #80b400;
+    border-radius: 30px 30px 30px 0px;
+    transition: 1s ease;
+    position:relative;
+    display: flex;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard .cardbefore {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard .cardbefore p{
+    text-align: center;
+    font-family: helvetica-bold;
+    color: #fff;
+    font-size: 25px;
+    text-shadow:2px 2px 0px #408819;
+}
+
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard1 {
+    height: 100%;
+    background: url(../img/servicios/gran.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    transition: 1s ease;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard2 {
+    background: url(../img/servicios/offset.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    transition: 1s ease;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard3 {
+    background: url(../img/servicios/inst.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    transition: 1s ease;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard4 {
+    background: url(../img/servicios/especial.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    transition: 1s ease;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard5 {
+    background: url(../img/servicios/cnc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    transition: 1s ease;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard6 {
+    background: url(../img/servicios/diseno.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    transition: 1s ease;
+}
+
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard .cardafeter {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 50px;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms ease;
+    opacity: 0;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard .cardafeter h3 {
+    font-family: helvetica-bold;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+}
+.servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard .cardafeter p {
+    font-family: helvetica;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+.closeservicios {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    background: none;
+    border:2px solid  #43c100;
+    color: #43c100;
+    justify-content: center;
+    align-items: center;
+    font-family: helvetica;
+    font-size: 25px;
+    border-radius: 50%;
+    z-index: 710;
+}
+
+
+
+
+.mastercontacto {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+.contacto {
+    width: 100%;
+    height: 100%;
+    background: url(../img/contacto/back.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+}
+.contacto .contactocont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacto .contactocont .formulariocontacto {
+    display: none;
+}
+.contacto .contactocont .infocontacto {
+    width: 60%;
+    height: 90%;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 10px 10px 0px #44c10053;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.contacto .contactocont .infocontacto .adress {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.contacto .contactocont .infocontacto .adress .iconmap {
+    width: 50px;
+    height: 50px;
+}
+.contacto .contactocont .infocontacto .adress .iconmap img {
+    width: 100%;
+    height: auto;
+}
+.contacto .contactocont .infocontacto .adress .txtmap {
+    font-size: 20px;
+    font-family: helvetica;
+}
+.contacto .contactocont .infocontacto a {
+    background: #43c100;
+    width: 30%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: helvetica-bold;
+    color:#fff;
+    gap: 10px;
+}
+.contacto .contactocont .infocontacto a img {
+    height: 100%;
+}
+.contacto .contactocont .infocontacto .correo {
+    width: 60%;
+    height: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.contacto .contactocont .infocontacto .correo .correoicon {
+    height: 100%;
+}
+.contacto .contactocont .infocontacto .correo .correoicon img {
+    height: 100%;
+}
+.contacto .contactocont .infocontacto .correo p {
+    font-family: helvetica;
+    font-size: 15px;
+}
+.contacto .contactocont .infocontacto .telefono {
+    width: 60%;
+    height: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.contacto .contactocont .infocontacto .telefono .phoneicon {
+    height: 100%;
+}
+.contacto .contactocont .infocontacto .telefono .phoneicon img {
+    height: 100%;
+}
+.contacto .contactocont .infocontacto .telefono p {
+    font-family: helvetica;
+}
+
+
+@media screen and (max-width: 800px) {
+    nav .navsections {
+        display: none;
+    }
+    nav .navsectionsresponsive {
+        display: flex;
+    }
+}
+@media screen and (max-width: 800px) {
+    .hero {
+        flex-wrap: wrap;
+    }
+    .hero .herotext {
+        width: 100%;
+        height: 30%;
+        padding-top: 150px;
+    }
+    .hero .herotext .herotxtcont img {
+        max-width: 80vw;
+    }
+    .hero .heroimg {
+        height: 60%;
+        width: 100%;
+        justify-content: right;
+    }
+    .hero .heroimg .heroimgcont img {
+        max-width: 80vw;
+        right: -50px;
+    }
+    .hero2 .hero2text .hero2textbox p {
+        font-size: 40px;
+    }
+    .hero2 .hero2greenbox {
+        height: 40%;
+    }
+    .hero2 .hero2greenbox .hero2greenboxint {
+        border-radius: 50px 0 0 50px;
+    }
+    .hero2 .hero2greenbox .hero2greenboxint .hero2img {
+        width: 50%;
+    }
+    .hero2 .hero2greenbox .hero2greenboxint .hero2greentxt {
+        width: 50%;
+    }
+    .hero2 .hero2greenbox .hero2greenboxint .hero2greentxt .hero2greentxtint {
+        width: 100%;
+    }
+    .hero2 .hero2greenbox .hero2greenboxint .hero2greentxt .hero2greentxtint img {
+        margin-left: -50px;
+        width: 130%;
+        max-width: 130%;
+    }
+    .hero3 .hero3cont .hero3txt p {
+        font-size: 30px;
+        text-align: center;
+    }
+    .hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .contimghero3 {
+        overflow: hidden;
+    }
+    .hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .contimghero3 img {
+        height: 100%;
+    }
+    .hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .conttexthero3 {
+        height: 50%;
+        width: 100%;
+    }
+    .hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .conttexthero3 .hero3title {
+        font-size: 20px;
+    }
+    .hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg .conttexthero3 p {
+        font-size: 10px;
+    }
+    .hero3 .hero3cont .hero3reel .hero3reelcont .hero3cardimg {
+        width: 200px;
+    }
+    .hero4 .hero4cont .hero4img img {
+        width: 150%;
+        height: max-content;
+        max-width: 150%;
+        max-height: 150%;
+    }
+    .hero4 .hero4cont .hero4img {
+        align-items: center;
+    }
+    .hero4 .hero4cont .hero4txt .hero4txtconocenos h3 {
+        font-size: 25px;
+    }
+    .hero4 .hero4cont .hero4txt .hero4txtconocenos p {
+        font-size: 10px;
+    }
+    .hero4 .hero4cont .hero4txt .hero4txtconocenos {
+        height: 30%;
+    }
+    .hero4 .hero4cont .hero4txt .hero4txtfilosofia {
+        height: 30%;
+    }
+    .hero4 .hero4cont .hero4txt .hero4txtfilosofia h3 {
+        font-size: 25px;
+    }
+    .hero4 .hero4cont .hero4txt .hero4txtfilosofia p{
+        font-size: 10px;
+    }
+    .hero5 .hero5cont .hero5txt h3 {
+        font-size: 30px;
+    }
+    .hero5 .hero5cont .hero5video iframe {
+        width: 100%;
+    }
+    .hero6 .hero6cont .preguntascont {
+        width: 70%;
+        margin-left: -100px;
+    }
+    .hero6 .hero6cont .preguntascont .preguntasbox > p {
+        font-size: 30px;
+    }
+    .hero6 .hero6cont .preguntascont .preguntasbox .minbox6 .preguntaspx h4 {
+        font-size: 15px;
+    }
+    .hero6 .hero6cont .preguntascont .preguntasbox .minbox6 .preguntaspx p {
+        font-size: 10px;
+    }
+    .hero7 .hero7cont .reeltestimonios .arrowtestimonios {
+        width: 30px;
+    }
+    .hero8 .hero8cont h5 {
+        font-size: 30px;
+    }
+    .contacto .contactocont .infocontacto {
+        width: 90%;
+    }
+    .contacto .contactocont .infocontacto .adress .txtmap {
+        font-size: 12px;
+    }
+    .contacto .contactocont .infocontacto .adress .iconmap {
+        width: 30px;
+        height: 30px;
+    }
+    .contacto .contactocont .infocontacto .adress .iconmap img {
+        width: 100%;
+        height: 100%;
+    }
+    .contacto .contactocont .infocontacto a {
+        font-size: 10px;
+        gap: 10px;
+    }
+    .contacto .contactocont .infocontacto .correo .correoicon {
+        width: 40px;
+        height: 30px;
+    }
+    .contacto .contactocont .infocontacto .correo p {
+        font-size: 13px;
+    }
+    .contacto .contactocont .infocontacto .telefono .phoneicon {
+        height: 30px;
+        width: 50px;
+    }
+    .servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard {
+        width: 180px;
+    }
+    .servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard .cardbefore p {
+        font-size: 20px;
+    }
+    .closeservicios {
+        top:30px;
+        right: 10px;
+    }
+    .servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard .cardafeter h3 {
+        font-size: 25px;
+    }
+    .servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard .cardafeter p {
+        font-size: 10px;
+    }
+    .servicios .servicioscont .serviciosreel .serviciosreelcont .servicioscard .cardafeter iframe {
+        max-width: 80vw;
+    }
+    .servicios .servicioscont {
+        width: 97%;
+    }
+    footer {
+        width: 100vw;
+        overflow: hidden;
+        height: 300px;
+    }
+    footer .footercont {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 30px;
+    }
+    footer .footercont .logocontfo {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    footer .footercont .redescont {
+        width: 100%;
+        height: 70%;
+    }
+    footer .footercont .redescont p  {
+        text-align: center;
+        height: max-content;
+    }
+    footer .footercont .redescont .iconredescont {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    footer .footercont .redescont .iconredescont a img {
+        height: 30px;
+        width: max-content;
+    }
+}
+
+
+
+.proximamente {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100vw;
+    height: 70px;
+    z-index:900 ;
+    justify-content: center;
+}
+.proximamente p {
+    background: #80bc00;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    font-size: 30px;
+    color: #fff;
+    font-family: helvetica-bold;
+    border-radius: 0px 0px 20px 20px;
+}
